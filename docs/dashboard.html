@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>repomap Live Architecture Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, theme: 'dark' });</script>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f1117; color: #e6edf3; margin: 0; padding: 2rem; }
+    .container { max-width: 1000px; margin: auto; }
+    h1 { color: #58a6ff; }
+    .badge { display: inline-block; background: #238636; color: white; padding: 4px 10px; border-radius: 12px; font-size: 0.85rem; font-weight: bold; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1.5rem; margin-top: 1.5rem; }
+    pre { background: #0d1117; padding: 1rem; border-radius: 6px; overflow-x: auto; color: #7ee787; font-size: 0.9rem; }
+    .mermaid { background: #0d1117; padding: 1.5rem; border-radius: 8px; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>🗺️ repomap Live Architecture Dashboard</h1>
+    <span class="badge">Generated via repomap MCP Server</span>
+    <div class="card">
+      <h2>System Architecture Diagram</h2>
+      <div class="mermaid">
+flowchart LR
+  M0["src/core (10f)"]
+  M1["(root) (12f)"]
+  M2["tests (2f)"]
+  M3["src/mcp (1f)"]
+  M4["scripts (2f)"]
+  M5["src/cli (1f)"]
+  M6[".github (4f)"]
+  M7["hooks (2f)"]
+  M8[".claude-plugin (2f)"]
+  M9["skills (1f)"]
+  M10["commands (3f)"]
+  M11["src (1f)"]
+  M2 --> M11
+  M3 --> M11
+  M5 --> M11
+  M11 --> M0
+      </div>
+    </div>
+    <div class="card">
+      <h2>Live Overview & Hot Files</h2>
+      <pre># Overview: skill
+Files: 41 | LOC: 3,659 | Cycles: 0
+
+## Entry Points
+- `dist/index.js` (package.json main)
+- `dist/mcp/server.js` (package.json bin (mcp-repomap))
+- `dist/cli/index.js` (package.json bin (repomap))
+- `package.json` (npm script "build") — `tsc`
+- `src/index.ts` (Standard entry file)
+- `.github/workflows/ci.yml` (GitHub Actions workflow)
+- `.github/workflows/publish.yml` (GitHub Actions workflow)
+
+## Architecture
+- **src/core** (10 files, 2315 LOC): Core domain logic and shared engine (getModuleKey, buildArchitectureSummary, computeHotFiles, REPOMAP_DIR)
+- **(root)** (12 files, 393 LOC): (root) module
+- **tests** (2 files, 320 LOC): Test suites and fixtures (makeTempRepo) -> [src]
+- **src/mcp** (1 files, 158 LOC): Model Context Protocol server (createRepomapMcpServer) -> [src]
+- **scripts** (2 files, 124 LOC): Automation and build scripts (buildFeatureWithMcp)
+- **src/cli** (1 files, 100 LOC): Command-line interface -> [src]
+- **.github** (4 files, 96 LOC): CI/CD workflows and repository templates
+- **hooks** (2 files, 64 LOC): Lifecycle or UI hooks (main)
+- **.claude-plugin** (2 files, 39 LOC): .claude-plugin module
+- **skills** (1 files, 20 LOC): skills module
+- **commands** (3 files, 19 LOC): commands module
+- **src** (1 files, 11 LOC): src module -> [src/core]
+
+## Top Hot Files
+- `src/core/types.ts` (fan-in:8, churn:1, 109 LOC)
+- `src/index.ts` (fan-in:3, churn:1, 11 LOC)
+- `src/core/scanner.ts` (fan-in:3, churn:1, 263 LOC)
+- `src/core/parser.ts` (fan-in:2, churn:1, 569 LOC)
+- `src/core/graph.ts` (fan-in:2, churn:1, 318 LOC)
+- `src/core/formatter.ts` (fan-in:2, churn:1, 224 LOC)
+- `src/core/architecture.ts` (fan-in:2, churn:1, 157 LOC)
+- `src/core/entrypoints.ts` (fan-in:2, churn:1, 131 LOC)</pre>
+    </div>
+  </div>
+</body>
+</html>
