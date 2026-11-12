@@ -1,0 +1,16 @@
+{
+  "name": "repomap",
+  "version": "0.1.0",
+  "description": "Token-efficient codebase map generator (architecture, entry points, dependency graph, key symbols, and hot files) so AI agents never re-read the whole repo.",
+  "author": {
+    "name": "Rohan"
+  },
+  "license": "MIT",
+  "keywords": [
+    "codebase-map",
+    "mcp",
+    "architecture",
+    "dependencies",
+    "tree-sitter"
+  ]
+}
