@@ -2,7 +2,7 @@
 
 **Give your AI coding agent a 3k-token map of any codebase in under a second — so it stops re-reading the entire repo every session.**
 
-[![CI](https://github.com/<github-user>/repomap/actions/workflows/ci.yml/badge.svg)](https://github.com/<github-user>/repomap/actions/workflows/ci.yml)
+[![CI](https://github.com/rohanpandityy35-bit/repomap/actions/workflows/ci.yml/badge.svg)](https://github.com/rohanpandityy35-bit/repomap/actions/workflows/ci.yml)
 [![npm version](https://img.shields.io/npm/v/mcp-repomap.svg)](https://www.npmjs.com/package/mcp-repomap)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
@@ -45,7 +45,7 @@ bash scripts/record-demo.sh
 Inside Claude Code:
 
 ```text
-/plugin marketplace add <github-user>/repomap
+/plugin marketplace add rohanpandityy35-bit/repomap
 /plugin install repomap@repomap
 ```
 

@@ -5,7 +5,7 @@ Thank you for your interest in contributing to **repomap**!
 ## Development Setup
 
 ```bash
-git clone https://github.com/<github-user>/repomap.git
+git clone https://github.com/rohanpandityy35-bit/repomap.git
 cd repomap
 npm install
 npm run build
