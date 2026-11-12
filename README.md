@@ -27,13 +27,12 @@ Measured on real open-source repositories using `mcp-repomap v0.1.0` (default `3
 
 ## Demo
 
-> ![repomap 10-second demo](docs/demo.gif) *(Demo GIF placeholder — record locally with `bash scripts/record-demo.sh` using [VHS](https://github.com/charmbracelet/vhs))*
+![repomap 10-second demo](docs/demo.gif)
 
-To record the 10-second demo GIF yourself:
+You can re-record this demo GIF anytime using [VHS](https://github.com/charmbracelet/vhs):
 
 ```bash
-# Requires VHS (https://github.com/charmbracelet/vhs)
-bash scripts/record-demo.sh
+vhs demo.tape
 ```
 
 ---
