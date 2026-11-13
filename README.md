@@ -1,4 +1,4 @@
-# repomap
+# RepoMap
 
 **Give your AI coding agent a 3k-token map of any codebase in under a second — so it stops re-reading the entire repo every session.**
 
